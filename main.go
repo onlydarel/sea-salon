@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/onlydarel/sea-salon.git/pkg/handlers"
+	"github.com/onlydarel/sea-salon/pkg/handlers"
 	"net/http"
 )
 

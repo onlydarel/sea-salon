@@ -1,7 +1,7 @@
 package handlers
 
 import (
-	"github.com/onlydarel/sea-salon.git/pkg/render"
+	"github.com/onlydarel/sea-salon/pkg/render"
 	"net/http"
 )
 
