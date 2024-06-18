@@ -69,6 +69,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-- **Darel Pnadey** - [GitHub](https://github.com/onlydarel)
+- **Grapheel Darel Pandey** - [GitHub](https://github.com/onlydarel)
 
 
