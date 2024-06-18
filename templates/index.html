@@ -1,0 +1,65 @@
+{{template "base" .}}
+
+{{define "css"}}
+    <link rel="stylesheet" href="./styles/index.css">
+{{end}}
+
+{{define "content"}}
+    <section class="main">
+        <img src="./assets/main-bg.jpg" alt="" class="main-bg">
+        <div class="main-content">
+            <div class="main-title">
+                <h1 class="sea-salon-text">
+                    SEA SALON
+                </h1>
+                <p class="sea-salon-slogan">
+                    “Beauty and Elegance Redefined”
+                </p>
+            </div>
+            <div class="main-reserve-btn">
+                <a href="/">Reserve</a>
+            </div>
+        </div>
+    </section>
+
+    {{/* SERVICES SECTION */}}
+
+    <section class="service-preview">
+        <h1 class="service-section-title">
+            SERVICES
+        </h1>
+        <div data-aos="fade-up" class="services">
+            <div class="service-box">
+                <img src="./assets/haricut-and-styling.jpg" alt="service-img">
+                <h1 class="service-title">
+                    Haircuts and Styling
+                </h1>
+                <p class="service-desc">
+                    Get the perfect haircut and styling from our skilled professionals at the best salon in town.
+                </p>
+                <a href="/" class="arrow-btn">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="service-box">
+                <img src="./assets/manicure-and-pedicure.jpg" alt="service-img">
+                <h1 class="service-title">
+                    Manicure and Pedicure
+                </h1>
+                <p class="service-desc">
+                    Pamper yourself with our manicure and pedicure services, ensuring your hands and feet look and feel their best.
+                </p>
+                <a href="/" class="arrow-btn">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <div class="service-box">
+                <img src="./assets/facial-treatment.jpg" alt="service-img">
+                <h1 class="service-title">
+                    Facial Treatments
+                </h1>
+                <p class="service-desc">
+                    Indulge in our rejuvenating facial treatments, designed to nourish your skin and leave you with a radiant glow.
+                </p>
+                <a href="/" class="arrow-btn">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+{{end}}

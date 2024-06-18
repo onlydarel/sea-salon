@@ -1,0 +1,187 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    user-select: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-color: #F5F5DC;
+}
+
+
+.navbar{
+    z-index: 100; /*Selalu paling atas*/
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+    background-color: #2d2d2d;
+    box-shadow: 0 0 10px #2d2d2d;
+}
+
+.navbar .title-icon{
+    display: flex;
+    align-items: center;
+}
+
+.navbar .title-icon a img{
+    margin: 10px 10px 10px 0;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    transition: all 0.5s ease-in-out;
+}
+
+.navbar .title-icon a img:hover{
+    filter: drop-shadow(0 1px 4px #2d2d2d);
+}
+
+.navbar .title-icon, .navbar .users {
+    display: flex;
+    align-items: center;
+}
+    /* Services, Reservation, Login, Sign Up */
+.navbar .title-icon a, .navbar .users a {
+    z-index: 2;
+    position: relative;
+    text-decoration: none;
+    font-size: 18px;
+    color: #FFC55A;
+    margin-left: 20px;
+    text-shadow: 0 2px 5px #2d2d2d;
+    transition: all 0.5s ease-in-out;
+}
+
+.navbar .title-icon a:hover, .navbar .users a:hover{
+    color: #f8551f;
+    text-shadow: 0 0 3px #2d2d2d;
+}
+
+.navbar .service_button::after,
+.navbar .reservation_button::after,
+.navbar .login_button::after,
+.navbar .signup_button::after {
+    content: '';
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -1%; left: 0;
+    box-shadow: 0 0 2px #2d2d2d;
+    background-color: #f8551f;
+    transform-origin: bottom right;
+    transition: transform 0.55s ease-out;
+}
+
+.navbar .service_button:hover::after,
+.navbar .reservation_button:hover::after,
+.navbar .login_button:hover::after,
+.navbar .signup_button:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.navbar .title-icon .sea-salon {
+    font-family: "Agbalumo", sans-serif;
+    margin-left: 0;
+    font-weight: 400; font-size: 27px;
+    color: #FFC55A;
+    text-shadow: 0 0 5px #2d2d2d;
+    transform: translateY(-12.5%);
+    transition: all 0.8s ease-in-out;
+}
+
+.navbar .title-icon .sea-salon:hover{
+    color: #FB7633;
+    text-shadow: 0 0 5px #404040;
+}
+
+/*FOOTER*/
+.footer {
+    height: 50vh;
+    background-color: #F5F5DC;
+    color: #2d2d2d;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p {
+    margin: 10px 0;
+}
+
+.footer h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact-box {
+    border-radius: 20px;
+    width: 200px;
+    box-shadow: 0 2px 5px #2d2d2d;
+    margin: 0 20px;
+    text-align: center;
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.contact-box h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.social-medias {
+    margin: 10px 0;
+}
+
+.social-medias a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+.social-medias a:hover {
+    font-size: 26px;
+    color: #2C4E80;
+}
+
+.copyright {
+    margin-top: 10px;
+    font-size: 14px;
+}

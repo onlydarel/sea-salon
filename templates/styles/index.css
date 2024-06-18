@@ -1,0 +1,164 @@
+/*MAIN SECTION*/
+
+.main {
+    height: 80vh;
+    width: 100%;
+    position: relative;
+}
+
+.main .main-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main img {
+    position: absolute;
+    height: 80vh;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(60%);
+    box-shadow: 0 0 5px #2d2d2d;
+}
+
+.main .main-content .main-title {
+    color: #F5F5DC;
+    text-shadow: 0 0 5px #F5F5DC;
+}
+
+.main .main-content .main-title h1 {
+    font-family: "League Spartan", sans-serif;
+    width: 750px;
+    font-size: 124px;
+}
+
+.main .main-content .main-title .sea-salon-slogan {
+    color: #FB7633;
+    text-shadow: 0 0 5px #FB7633;
+    transform: scale(1.1);
+}
+
+.main .main-content .main-reserve-btn {
+    position: relative;
+    width: 150px;
+    height: 40px;
+    background-color: #2d2d2d;
+    border-radius: 20px;
+    margin-top: 20px;
+    box-shadow: 0 0 5px #2d2d2d;
+    transition: all 0.5s ease-in-out;
+}
+
+.main .main-content .main-reserve-btn:hover {
+    background-color: #f8551f;
+    box-shadow: 0 0 10px #2d2d2d;
+    transform: scale(1.1);
+}
+
+.main .main-content .main-reserve-btn:active{
+    box-shadow: inset 0 0 5px #2d2d2d;
+}
+
+.main .main-content .main-reserve-btn a{
+    position: absolute;
+    align-content: center;
+    height: 100%;
+    width: 100%;
+    left: 50%;top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 18px;
+    color: #FFC55A;
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
+}
+
+.main .main-content .main-reserve-btn a:hover{
+    color: #2d2d2d;
+}
+
+/*SERVICE PREVIEW*/
+
+.service-preview{
+    height: 75vh;
+    background-color: #2d2d2d;
+}
+
+.service-preview .service-section-title{
+    position: relative;
+    color: #FFC55A;
+    text-shadow: 0 0 5px #FFC55A;
+    font-size: 32px;
+    left: 50%;
+    top: 12.5%;
+    transform: translate(-50%,-50%);
+    width: 155px;
+}
+
+.service-preview .services{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+}
+
+.service-preview .services .service-box{
+    position: relative;
+    margin: 20px;
+    border-radius: 15px;
+    width: 300px;
+    height: 75%;
+    background-color: rgba(245, 245, 220, 0.9);
+    padding: 20px;
+    box-shadow: 0 2px 5px #404040;
+    transition: all 0.4s ease-in-out;
+    overflow: visible;
+}
+
+.service-preview .services .service-box:hover{
+    scale: 110%;
+    background-color: rgba(245, 245, 220, 1);
+    box-shadow: 0 0 5px rgba(245, 245, 220, 1);
+}
+
+.service-preview .services .service-box:hover img{
+    filter: brightness(100%);
+}
+
+.service-preview .services .service-box h1{
+    font-size: 20px;
+}
+
+.service-preview .services .service-box p{
+    text-align: justify;
+    font-size: 10px;
+}
+
+.service-preview .services .service-box img{
+    box-shadow: inset 0 0 15px #404040;
+    border-radius: 10px;
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    filter: brightness(70%);
+    transition: all 0.4s ease-in-out;
+}
+
+.service-preview .service-box .arrow-btn {
+    position: absolute;
+    z-index: 10;
+    bottom: 10px;
+    right: 20px;
+    color: #404040;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.service-preview .service-box:hover .arrow-btn {
+    transform: scale(1.1);
+}
+
