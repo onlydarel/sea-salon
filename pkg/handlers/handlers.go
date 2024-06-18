@@ -1,8 +1,8 @@
 package handlers
 
 import (
+	"github.com/onlydarel/sea-salon.git/pkg/render"
 	"net/http"
-	"progressNow/pkg/render"
 )
 
 func Home(w http.ResponseWriter, r *http.Request) {

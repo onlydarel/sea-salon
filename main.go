@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
+	"github.com/onlydarel/sea-salon.git/pkg/handlers"
 	"net/http"
-	"progressNow/pkg/handlers"
 )
 
 const port = ":8080"
