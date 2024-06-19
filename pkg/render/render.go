@@ -9,7 +9,7 @@ import (
 )
 
 // RenderTemplate is a method to render the HTML template for the application
-func RenderTemplate(w http.ResponseWriter, tmpl string) {
+func RenderTemplate(w http.ResponseWriter, tmpl string, data interface{}) {
 	// Cache template
 	tc, err := createTemplateCache()
 	if err != nil {
@@ -24,7 +24,7 @@ func RenderTemplate(w http.ResponseWriter, tmpl string) {
 
 	// buffer for more error checking
 	buffer := new(bytes.Buffer)
-	err = temp.Execute(buffer, nil)
+	err = temp.Execute(buffer, data)
 	if err != nil {
 		log.Println("Error executing template:", err)
 	}
@@ -36,6 +36,7 @@ func RenderTemplate(w http.ResponseWriter, tmpl string) {
 	}
 }
 
+// createTemplateCache is used for creating a template cache using a map and returns the map and error
 func createTemplateCache() (map[string]*template.Template, error) {
 	myCache := map[string]*template.Template{}
 
@@ -53,7 +54,7 @@ func createTemplateCache() (map[string]*template.Template, error) {
 		if err != nil {
 			return myCache, err
 		}
-
+		// check for layout file in the templates folder
 		matches, err := filepath.Glob("./templates/*.layout.html")
 		if err != nil {
 			return myCache, err

@@ -5,6 +5,7 @@
 {{end}}
 
 {{define "content"}}
+    {{/* MAIN LANDING PAGE SECTION */}}
     <section class="main">
         <img src="./assets/main-bg.jpg" alt="" class="main-bg">
         <div class="main-content">
@@ -62,4 +63,73 @@
         </div>
     </section>
 
+    <section class="reviews">
+        <h2 class="review-title">Rate your experience with us!</h2>
+        <div class="main-review">
+            <div class="review-box">
+                <h2>Write your review</h2>
+                <form action="#" method="post">
+                    <div class="star-rating">
+                        <input type="radio" id="5-stars" name="rating" value="5">
+                        <label for="5-stars" class="fa fa-star"></label>
+                        <input type="radio" id="4-stars" name="rating" value="4">
+                        <label for="4-stars" class="fa fa-star"></label>
+                        <input type="radio" id="3-stars" name="rating" value="3">
+                        <label for="3-stars" class="fa fa-star"></label>
+                        <input type="radio" id="2-stars" name="rating" value="2">
+                        <label for="2-stars" class="fa fa-star"></label>
+                        <input type="radio" id="1-star" name="rating" value="1">
+                        <label for="1-star" class="fa fa-star"></label>
+                    </div><br>
+                    <div class="name-and-review">
+                        <label for="name" id="name-label">Name</label><br>
+                        <input type="text" id="name" name="name" placeholder="Your name..." required><br>
+                        <label for="comment" id="comment-label">Comment</label>
+                        <textarea id="comment" name="comment" placeholder="Your review..." required></textarea>
+                    </div>
+
+                    <button type="submit" id="submit">Submit</button>
+                </form>
+            </div>
+
+            <div class="reviews-result">
+                <h2>Recent reviews</h2>
+                <div class="reviews-display-box">
+                    {{range .Reviews}}
+                        <div class="review">
+                            <div class="name-and-rating">
+                                <h3>{{.Name}}<br>{{if eq .Rating "1"}}
+                                        <i class="fas fa-star"></i>
+                                    {{else if eq .Rating "2"}}
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    {{else if eq .Rating "3"}}
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    {{else if eq .Rating "4"}}
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    {{else if eq .Rating "5"}}
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    {{else}}
+                                        N/A
+                                    {{end}}
+                                </h3>
+                            </div>
+                            <div class="comment-result">
+                                <p>{{.Comment}}</p>
+                            </div>
+                        </div>
+                    {{end}}
+                </div>
+            </div>
+        </div>
+    </section>
 {{end}}
