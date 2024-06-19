@@ -6,7 +6,7 @@ import (
 )
 
 func Home(w http.ResponseWriter, r *http.Request) {
-	render.RenderTemplate(w, "index.html")
+	render.RenderTemplate(w, "index.page.html")
 }
 
 // Assets is a handler for static asset files in the templates folder
