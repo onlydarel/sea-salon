@@ -7,14 +7,14 @@ import (
 	"net/http"
 )
 
-func Home(w http.ResponseWriter, r *http.Request) {
+// Create a slice of example reviews (you can replace this with actual review data)
+var reviews = []models.Review{
+	{Name: "Felix Rafael", Rating: "5", Comment: "Salonnya bagus banget aku bisa jadi dirt block dengan pd 😘"},
+	{Name: "Ady Wijaya", Rating: "0", Comment: "Jelekk banget aku jadi KEK TELOR mukanya -100/10 😡"},
+	{Name: "Hans Christian", Rating: "4", Comment: "Bagus banget aku di rekomendasiin sama pelik makash beb 😍"},
+}
 
-	// Create a slice of example reviews (you can replace this with actual review data)
-	reviews := []models.Review{
-		{Name: "Felix Rafael", Rating: "5", Comment: "Salonnya bagus banget aku bisa jadi dirt block dengan pd 😘"},
-		{Name: "Ady Wijaya", Rating: "0", Comment: "Jelekk banget aku jadi KEK TELOR mukanya -100/10 😡"},
-		{Name: "Hans Christian", Rating: "4", Comment: "Bagus banget aku di rekomendasiin sama pelik makash beb 😍"},
-	}
+func Home(w http.ResponseWriter, r *http.Request) {
 
 	// Check if the form was submitted
 	if r.Method == http.MethodPost {
