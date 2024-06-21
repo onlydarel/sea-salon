@@ -7,7 +7,6 @@ import (
 	"net/http"
 )
 
-// Create a slice of example reviews (you can replace this with actual review data)
 var reviews = []models.Review{
 	{Name: "Felix Rafael", Rating: "5", Comment: "Salonnya bagus banget aku bisa jadi dirt block dengan pd 😘"},
 	{Name: "Ady Wijaya", Rating: "0", Comment: "Jelekk banget aku jadi KEK TELOR mukanya -100/10 😡"},
@@ -15,7 +14,6 @@ var reviews = []models.Review{
 }
 
 func Home(w http.ResponseWriter, r *http.Request) {
-
 	// Check if the form was submitted
 	if r.Method == http.MethodPost {
 		// Parse form data
@@ -30,9 +28,12 @@ func Home(w http.ResponseWriter, r *http.Request) {
 			Rating:  getRatingValue(r),
 			Comment: r.Form.Get("comment"),
 		}
-		reviews = append(reviews, review)
 		// Save the review (you can add code here to save it to a database or file)
 		fmt.Printf("New Review: %+v\n", review)
+
+		reviews = append(reviews, review)
+		http.Redirect(w, r, "/", http.StatusSeeOther)
+		return
 	}
 	data := map[string]interface{}{
 		"Reviews": reviews,
