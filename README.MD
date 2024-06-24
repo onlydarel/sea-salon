@@ -15,6 +15,8 @@ SEA Salon is a web application built with Go and HTML. This project is for Compf
 
 - [Go](https://golang.org/doc/install) 1.22.3 or later
 - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- [SQLite3](https://www.sqlite.org/download.html)
+- GCC Compiler (necessary for building the SQLite driver)
 
 ## Installation
 
@@ -33,6 +35,35 @@ SEA Salon is a web application built with Go and HTML. This project is for Compf
     go mod init github.com/onlydarel/sea-salon
     go mod tidy
     ```
+
+3. Install the SQLite driver for Go:
+
+    ```sh
+    go get -u github.com/mattn/go-sqlite3
+    ```
+
+4. Ensure you have a GCC compiler installed:
+   - **Windows:** Download and install [TDM-GCC](https://jmeubank.github.io/tdm-gcc/).
+   - **macOS:** Ensure Xcode Command Line Tools are installed:
+
+     ```sh
+     xcode-select --install
+     ```
+
+   - **Linux:** Install GCC using your package manager:
+
+     **Debian-based distributions (e.g., Ubuntu):**
+
+     ```sh
+     sudo apt update
+     sudo apt install build-essential
+     ```
+
+     **Red Hat-based distributions (e.g., Fedora, CentOS):**
+
+     ```sh
+     sudo dnf install gcc
+     ```
 
 ## Running the Application
 
@@ -70,5 +101,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Contact
 
 - **Grapheel Darel Pandey** - [GitHub](https://github.com/onlydarel)
-
-

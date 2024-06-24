@@ -1,0 +1,31 @@
+{{template "base" .}}
+
+{{define "css"}}
+    <link rel="stylesheet" href="./styles/reservation.css">
+{{end}}
+{{define "content"}}
+    <section class="form-section">
+        <div class="form-container">
+            <form action="#" method="post">
+                <h2>Make a Reservation!</h2>
+                <label class="form-label" for="name">Name*</label>
+                <input type="text" id="name" name="name" required><br>
+
+                <label class="form-label" for="phone_number">Active Phone Number*</label>
+                <input type="tel" id="phone_number" name="phone_number" required><br>
+
+                <label class="form-label" for="service_type">Type of Service*</label>
+                <select id="service_type" name="service_type" required>
+                    <option value="Haircuts and styling">Haircuts and styling</option>
+                    <option value="Manicure and pedicure">Manicure and pedicure</option>
+                    <option value="Facial treatments">Facial treatments</option>
+                </select><br>
+
+                <label class="form-label" for="date_and_time">Date and Time*</label>
+                <input type="datetime-local" id="date_and_time" name="date_and_time" step="900" min="2024-06-24T10.00" max="2024-12-31T23:59" required><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </section>
+{{end}}

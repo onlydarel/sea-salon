@@ -337,7 +337,7 @@
 .reviews-display-box .review .comment-result p {
     height: auto;
     margin: 0;
-    animation: scrollText 5s linear infinite;
+    animation: scrollText 10s linear infinite;
 }
 
 @keyframes scrollText {
