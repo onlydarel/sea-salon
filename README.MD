@@ -78,13 +78,25 @@ SEA Salon is a web application built with Go and HTML. This project is for Compf
 ## Project Structure
 
 - `main.go`: The main entry point for the application.
+- `routes.go`: The routing logic for the application.
 - `pkg/handlers/`: Contains the handler functions for various routes.
-- `assets/`: Contains static assets like images and JavaScript files.
-- `styles/`: Contains CSS files for styling the web pages.
+- `templates/`: Contains the html template, assets folder, and styles folder.
+- `templates/assets/`: Contains static assets like images and JavaScript files.
+- `templates/styles/`: Contains CSS files for styling the web pages.
+- `database/`: Contains the database for the project and the Golang code for initializing the database.
+- `models/`: Contains the models/structs used to run the application
+
 
 ## Usage
 
+v1.0.0 - v1.0.3
 - There is no usage yet, because the first level task is only to build the homepage.
+
+v2.0.0 - v2.0.2
+- Implemented a customer review system for SEA Salon. This allows users to leave reviews on the salon, including a star rating (from 1 to 5) and a comment.
+
+v3.0.0 - v3.0.1
+- Created a reservation form in the application for users to input their details and make a reservation. The form is synced with a database and the submitted data appears in the database.
 
 ## Contributing
 
