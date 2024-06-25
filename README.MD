@@ -70,7 +70,7 @@ SEA Salon is a web application built with Go and HTML. This project is for Compf
 1. Build and run the server:
 
     ```sh
-    go run main.go
+    go run .
     ```
 
 2. Open your web browser and navigate to `http://localhost:8080`.
