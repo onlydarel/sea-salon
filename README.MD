@@ -9,7 +9,6 @@ SEA Salon is a web application built with Go and HTML. This project is for Compf
 - Home Page
 - Services Overview
 - Reservation System
-- User Authentication
 
 ## Prerequisites
 
